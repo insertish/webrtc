@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3. Signaling</title>
+    </head>
+    <body>
+        <video id="local" autoplay playsinline style="width: 40%"></video>
+        <div id="remote"></div>
+
+        <div>
+            <button id="call" disabled>Join</button>
+            <button id="quit" disabled>Leave</button>
+        </div>
+    </body>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+</html>

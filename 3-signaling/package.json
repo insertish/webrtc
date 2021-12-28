@@ -1,0 +1,13 @@
+{
+  "name": "3-signaling",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2",
+    "socket.io": "^4.4.0"
+  },
+  "scripts": {
+    "start": "node ."
+  }
+}
