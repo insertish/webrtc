@@ -27,14 +27,17 @@ io.on('connection', (socket) => {
     });
 
     socket.on('offer', (data) => {
+        console.log(`${id} sent offer.`);
         socket.broadcast.emit('offer', { ...data, source: id });
     });
 
     socket.on('answer', (data) => {
+        console.log(`${id} sent answer.`);
         socket.broadcast.emit('answer', { ...data, source: id });
     });
 
     socket.on('candidate', (data) => {
+        console.log(`${id} sent new ICE candidate.`);
         socket.broadcast.emit('candidate', { ...data, source: id });
     });
 
@@ -53,4 +56,4 @@ io.on('connection', (socket) => {
     socket.on('disconnect', leaveCall);
 });
 
-server.listen(3000, () => console.log('Listening on :3000'));
+server.listen(5100, () => console.log('Listening on :5100'));
